@@ -9,5 +9,7 @@ class Song < ActiveRecord::Base
 
   def artist_name
     if self.artist
+    else
+    end
   end
 end
