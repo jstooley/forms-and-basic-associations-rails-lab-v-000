@@ -10,6 +10,7 @@ class Song < ActiveRecord::Base
   def artist_name
     if self.artist
     else
+      "none"
     end
   end
 end
