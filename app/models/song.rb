@@ -35,7 +35,7 @@ class Song < ActiveRecord::Base
 
 
     self.notes_array.each do |note|
-      notes_array << note.content
+      if !notes.empty?
     end
   end
 
