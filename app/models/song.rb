@@ -33,6 +33,7 @@ class Song < ActiveRecord::Base
 
   def note_contents=(notes_array)
     notes_array.each do |note|
+      binding.pry
       if !note.empty?
         self.notes << Note.find_or_create_by(content: note)
       end
@@ -41,7 +42,6 @@ class Song < ActiveRecord::Base
 
   def note_contents
     notes_array = []
-    binding.pry
 
     self.notes.each do |note|
       notes_array << note.content
