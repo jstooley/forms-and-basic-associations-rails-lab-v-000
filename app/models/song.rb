@@ -32,7 +32,7 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents
-    notes = []
+    notes_array = []
   end
 
 end
