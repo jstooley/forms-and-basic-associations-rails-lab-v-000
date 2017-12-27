@@ -31,6 +31,15 @@ class Song < ActiveRecord::Base
 
   end
 
+  def note_contents=(note_array)
+    notes_array = []
+
+    self.notes.each do |note|
+      notes_array << note.content
+    end
+    notes_array
+  end
+
   def note_contents
     notes_array = []
 
