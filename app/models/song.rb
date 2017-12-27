@@ -14,7 +14,21 @@ class Song < ActiveRecord::Base
     else
       "No Artist"
     end
-    
+
+  end
+
+  def genre_name=(name)
+    self.genre = Genre.find_or_create_by(name: name)
+  end
+
+  def artist_name
+
+    if self.genre
+      self.genre.name
+    else
+      "No Genre"
+    end
+
   end
 
 end
