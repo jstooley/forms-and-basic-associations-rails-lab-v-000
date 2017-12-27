@@ -32,8 +32,6 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents=(note_array)
-
-
     self.notes_array.each do |note|
       if !notes.empty?
         self.notes << Note.create(content: note)
